@@ -9,4 +9,123 @@
 
 
 .container 
-    background-color: $primary
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    background: linear-gradient($linear1, $linear2)
+    position: relative
+
+.backhome
+    color: $white
+    font-size: 30px
+    position: absolute
+    top: 10%
+    left: 15%
+    cursor: pointer
+
+.containertitle
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 70%
+    .title1
+        color: $white
+        margin-left: 10px
+        font-size: 40px
+    .title2
+        color: $primary
+        font-size: 40px
+
+.containerform
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 70%
+    border: 2px solid $black
+    border-radius: 12px
+    margin-top: 40px
+    .iniciarsesion
+        width: 100%
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        text-align: center
+        font-size: 18px
+        padding: 10px
+        color: $white
+        background-color: $primary
+    .form
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 30px 0px
+        width: 100%
+        background-color: $black
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        .label1
+            margin-bottom: 5px
+            color: $white
+            font-size: 12px
+            align-self: flex-start
+            margin-left:15.5%
+        .label2
+            margin-top: 20px
+            margin-bottom: 5px
+            color: $white
+            font-size: 12px
+            align-self: flex-start
+            margin-left:15.5%
+        .formfield1
+            border-radius: 5px
+            border: none
+            margin-bottom: 5px
+            padding: 10px
+            width: 70%
+            background-color: $lightGrey
+            color: $white
+        .formfield2
+            border-radius: 5px
+            border: none
+            margin-bottom: 5px
+            padding: 10px
+            background-color: $lightGrey
+            width: 100%
+            color: $white
+        .containerpassword
+            display: flex
+            flex-direction: row
+            justify-content: center
+            width: 70%
+        .formerrors
+            color: red
+            align-self: flex-start
+            margin-left:15.5%
+            font-size: 12px
+        .button
+            width: 70%
+            padding: 10px
+            border: 1px solid $primary
+            border-radius: 10px
+            background: transparent 
+            color: $primary
+            margin-top: 20px
+            font-size: 15px
+            cursor: pointer
+        .crearcuenta
+            font-size: 14px
+            margin-top: 20px
+            color: $white
+            text-decoration: none
+            cursor: pointer
+            &:hover
+                text-decoration: underline
+
+
+            
+
+
