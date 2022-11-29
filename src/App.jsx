@@ -19,10 +19,12 @@ function App() {
           <Route path='/categories' element={ <Categories /> } />
           <Route path='/detail' element={ <Detail /> } />
           <Route path='/contact' element={ <Contact /> } />
-          <Route path='login' element={ <Login /> } />
-          <Route path='signup' element={ <SignUp /> } />
         </Routes>
       </Layout>
+      <Routes>
+          <Route path='login' element={ <Login /> } />
+          <Route path='signup' element={ <SignUp /> } />
+      </Routes>
     </BrowserRouter>
   )
 }
