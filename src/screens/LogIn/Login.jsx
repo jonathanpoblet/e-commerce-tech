@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
 import Logo from '../../assets/logo.png'
-import { ArrowLeft } from 'react-bootstrap-icons';
+import { ArrowLeft, Eye } from 'react-bootstrap-icons';
 import styles from './login.module.sass';
 
 const LoginSchema = Yup.object().shape({
@@ -18,6 +18,17 @@ const LoginSchema = Yup.object().shape({
 })
 
 const Login = () => {
+  
+  const [verContraseña, setVerContraseña] = useState(false)
+
+  function verContraseñaFunction() {
+    if(verContraseña){
+      setVerContraseña(false);
+    } else {
+      setVerContraseña (true);
+    }
+  }
+
   return (
     <div className={ styles.container }>
     <Link to={'/'}>
@@ -47,7 +58,8 @@ const Login = () => {
         
               <label className={ styles.label2 } htmlFor='password'>Contraseña</label>
               <div className={ styles.containerpassword }>
-                <Field name='password' className={ styles.formfield2 } />
+                <Field type={verContraseña? 'text' : 'password'} name='password' className={ styles.formfield2 } />
+                <Eye onClick={() => verContraseñaFunction()} className={ styles.eye }/>
               </div>
               { errors.password ? ( <div className={ styles.formerrors }>{ errors.password }</div> ) : null }
 
