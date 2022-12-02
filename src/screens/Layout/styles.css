@@ -1,0 +1,110 @@
+nav{
+    background-color: #303030;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1::first-letter{
+    color: #26E122
+}
+nav h1{
+    font-size: 25px;
+}
+.nav-section1{
+    display: flex;
+    align-items: center;
+}
+.nav-section1 img{
+    margin-right: 10px;
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+
+.cart{
+    margin-right: 20px;
+}
+.search-icon{
+    position: absolute;
+    color: #222222;
+    top: 15.8%;
+    left: 70%;
+}
+
+.menuDespegable{
+background-color: #222222;
+color: white;
+padding: 5px;
+}
+.menuDespegable input{
+    width: 220px;
+    padding: 10px 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+    border-radius: 12px;
+}
+.menuDespegable ul li{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.menuDespegable ul li:nth-child(3){
+    color:#26E122 ;
+    background-color:#303030;
+}
+.menuDespegable ul li:nth-child(1){
+    color:#26E122 ;
+    background-color:#303030;
+}
+
+footer{
+    background-color:#303030;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+footer h1::first-letter{
+    color: #26E122
+}
+footer h1{
+    font-size: 25px;
+}
+
+@media screen and (max-width: 375px) {
+    .search-icon{
+        position: absolute;
+        color: #222222;
+        top: 15.8%;
+        left: 70%;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .search-icon{
+        position: absolute;
+        color: #222222;
+        top: 11.2%;
+        left: 65%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .search-icon{
+        position: absolute;
+        color: #222222;
+        top: 14.2%;
+        left: 68%;
+    }
+    .menuDespegable input{
+        margin-left: 23%;
+        width: 280px;
+    }
+}
+
