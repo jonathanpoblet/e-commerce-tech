@@ -1,0 +1,54 @@
+.containerInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-block: 10px;
+  width: 100%;
+}
+.inputConsulta {
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+.input {
+  width: 100%;
+  padding: 5px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+.label {
+  color: #26e122;
+  padding-left: 5px;
+  font-family: "Roboto, sans-serif";
+  text-transform: capitalize;
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .containerInput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 3%;
+    margin-block: 2%;
+  }
+  .inputConsulta {
+    width: 100%;
+    padding-bottom: 16%;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+  }
+  .input {
+    width: 100%;
+    padding: 2%;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+  }
+  .label {
+    color: #26e122;
+    padding-left: 5px;
+    font-family: "Roboto, sans-serif";
+    text-transform: capitalize;
+  }
+}
