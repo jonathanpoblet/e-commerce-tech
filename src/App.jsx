@@ -1,32 +1,36 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './screens/Layout/Layout';
-import Categories from './screens/Categories/Categories';
-import Contact from './screens/Contact/Contact';
-import Detail from './screens/Detail/Detail';
-import Home from './screens/Home/Home';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+
 import Login from './screens/LogIn/Login';
-import Products from './screens/Products/Products';
 import SignUp from './screens/SignUp/SignUp';
 
-function App() {
+import { DashboardRoute } from './mainStack/DashboardRoute';
 
-  return (
-    <BrowserRouter>
-      <Layout>
+export default function App() {
+  return(
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route index  element={ <Home /> } />
-          <Route path='/products' element={ <Products /> } />
-          <Route path='/categories' element={ <Categories /> } />
-          <Route path='/detail' element={ <Detail /> } />
-          <Route path='/contact' element={ <Contact /> } />
+          <Route path='/' element={ <Navigate replace to='/home' /> }/>
+          <Route 
+            path='/login'
+            element={
+              <Login />
+            }
+          />
+          <Route 
+            path='/signup'
+            element={
+              <SignUp />
+            }
+          />
+          <Route
+            path='/*'
+            element={
+              <DashboardRoute />
+            }
+          />
         </Routes>
-      </Layout>
-      <Routes>
-          <Route path='login' element={ <Login /> } />
-          <Route path='signup' element={ <SignUp /> } />
-      </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   )
 }
-
-export default App;
